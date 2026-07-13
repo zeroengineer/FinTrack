@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hive/hive.dart';
@@ -15,12 +16,14 @@ void main() {
     tempDir = Directory.systemTemp.createTempSync('hive_test_');
     Hive.init(tempDir.path);
     if (!Hive.isAdapterRegistered(3)) Hive.registerAdapter(SettingsRecordAdapter());
-    final box = await Hive.openBox<SettingsRecord>(settingsBoxName);
+    // In-memory box: widget tests run in a FakeAsync zone where real file
+    // IO futures never complete, so a disk-backed box would hang forever.
+    final box = await Hive.openBox<SettingsRecord>(settingsBoxName, bytes: Uint8List(0));
     await box.put(settingsKey, SettingsRecord());
   });
 
   tearDown(() async {
-    await Hive.deleteFromDisk();
+    await Hive.close();
     tempDir.deleteSync(recursive: true);
   });
 

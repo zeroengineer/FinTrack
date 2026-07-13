@@ -143,5 +143,9 @@ ThemeData buildAppTheme(Brightness brightness) {
 }
 
 extension AppPaletteX on BuildContext {
-  AppPalette get palette => Theme.of(this).extension<AppPalette>()!;
+  AppPalette get palette {
+    final theme = Theme.of(this);
+    return theme.extension<AppPalette>() ??
+        (theme.brightness == Brightness.dark ? AppPalette.dark : AppPalette.light);
+  }
 }
