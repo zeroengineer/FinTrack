@@ -6,7 +6,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:finance_tracker/models/txn_kind.dart';
 import 'package:finance_tracker/models/category.dart';
 import 'package:finance_tracker/data/hive_boxes.dart';
-import 'package:finance_tracker/data/seed_categories.dart';
 import 'package:finance_tracker/providers/categories_provider.dart';
 import 'package:finance_tracker/features/categories/categories_screen.dart';
 

@@ -23,7 +23,7 @@ class CategoryIconAvatar extends StatelessWidget {
       width: size,
       height: size,
       decoration: BoxDecoration(
-        color: color.withOpacity(0.15),
+        color: color.withValues(alpha: 0.15),
         borderRadius: BorderRadius.circular(size * 0.32),
       ),
       alignment: Alignment.center,

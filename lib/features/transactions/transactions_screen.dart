@@ -120,7 +120,7 @@ class _FilterChipsRow extends ConsumerWidget {
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
             decoration: BoxDecoration(
-              color: active ? AppColors.accent.withOpacity(0.16) : palette.surface,
+              color: active ? AppColors.accent.withValues(alpha: 0.16) : palette.surface,
               border: Border.all(color: active ? AppColors.accent : palette.border),
               borderRadius: BorderRadius.circular(20),
             ),

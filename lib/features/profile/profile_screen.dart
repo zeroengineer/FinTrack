@@ -226,7 +226,7 @@ class _PrefRow extends StatelessWidget {
         decoration: BoxDecoration(border: isLast ? null : Border(bottom: BorderSide(color: palette.border))),
         child: Row(
           children: [
-            Container(width: 36, height: 36, decoration: BoxDecoration(color: color.withOpacity(0.15), borderRadius: BorderRadius.circular(11)), child: Icon(icon, size: 20, color: color)),
+            Container(width: 36, height: 36, decoration: BoxDecoration(color: color.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(11)), child: Icon(icon, size: 20, color: color)),
             const SizedBox(width: 15),
             Expanded(child: Text(label, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700))),
             trailing,

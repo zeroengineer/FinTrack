@@ -140,7 +140,7 @@ class _AddCategoryDialogState extends ConsumerState<_AddCategoryDialog> {
                   GestureDetector(
                     onTap: () => setState(() => _iconName = name),
                     child: CircleAvatar(
-                      backgroundColor: _iconName == name ? Theme.of(context).colorScheme.primary.withOpacity(0.2) : null,
+                      backgroundColor: _iconName == name ? Theme.of(context).colorScheme.primary.withValues(alpha: 0.2) : null,
                       child: Icon(kIconLookup[name]),
                     ),
                   ),

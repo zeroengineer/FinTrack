@@ -7,7 +7,6 @@ import 'package:finance_tracker/models/txn_kind.dart';
 import 'package:finance_tracker/models/transaction.dart';
 import 'package:finance_tracker/models/category.dart';
 import 'package:finance_tracker/data/hive_boxes.dart';
-import 'package:finance_tracker/data/seed_categories.dart';
 import 'package:finance_tracker/features/analytics/analytics_screen.dart';
 
 void main() {

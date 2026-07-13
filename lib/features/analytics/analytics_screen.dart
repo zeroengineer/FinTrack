@@ -231,7 +231,7 @@ class AnalyticsScreen extends ConsumerWidget {
                             color: AppColors.accent,
                             barWidth: 3,
                             dotData: const FlDotData(show: false),
-                            belowBarData: BarAreaData(show: true, color: AppColors.accent.withOpacity(0.2)),
+                            belowBarData: BarAreaData(show: true, color: AppColors.accent.withValues(alpha: 0.2)),
                           ),
                         ],
                       ),

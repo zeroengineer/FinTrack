@@ -7,7 +7,6 @@ import 'package:finance_tracker/models/transaction.dart';
 import 'package:finance_tracker/models/category.dart';
 import 'package:finance_tracker/models/settings.dart';
 import 'package:finance_tracker/data/hive_boxes.dart';
-import 'package:finance_tracker/data/seed_categories.dart';
 import 'package:finance_tracker/providers/app_state.dart';
 
 void main() {

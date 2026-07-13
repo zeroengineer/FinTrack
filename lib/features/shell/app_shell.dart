@@ -62,7 +62,7 @@ class _BottomNav extends ConsumerWidget {
     return Container(
       height: 96,
       padding: const EdgeInsets.fromLTRB(12, 12, 12, 0),
-      decoration: BoxDecoration(color: palette.surface.withOpacity(0.9), border: Border(top: BorderSide(color: palette.border))),
+      decoration: BoxDecoration(color: palette.surface.withValues(alpha: 0.9), border: Border(top: BorderSide(color: palette.border))),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

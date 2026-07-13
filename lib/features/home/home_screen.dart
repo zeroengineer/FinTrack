@@ -178,7 +178,7 @@ class _HeroTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 13),
-      decoration: BoxDecoration(color: Colors.white.withOpacity(0.13), borderRadius: BorderRadius.circular(16)),
+      decoration: BoxDecoration(color: Colors.white.withValues(alpha: 0.13), borderRadius: BorderRadius.circular(16)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -215,7 +215,7 @@ class _QuickAction extends StatelessWidget {
               Container(
                 width: 34,
                 height: 34,
-                decoration: BoxDecoration(color: color.withOpacity(0.14), borderRadius: BorderRadius.circular(11)),
+                decoration: BoxDecoration(color: color.withValues(alpha: 0.14), borderRadius: BorderRadius.circular(11)),
                 child: Icon(icon, size: 20, color: color),
               ),
               const SizedBox(width: 10),
@@ -251,7 +251,7 @@ class _BudgetCard extends StatelessWidget {
                   Container(
                     width: 38,
                     height: 38,
-                    decoration: BoxDecoration(color: AppColors.accent.withOpacity(0.16), borderRadius: BorderRadius.circular(12)),
+                    decoration: BoxDecoration(color: AppColors.accent.withValues(alpha: 0.16), borderRadius: BorderRadius.circular(12)),
                     child: const Icon(Symbols.account_balance_wallet, size: 22, color: AppColors.accent),
                   ),
                   const SizedBox(width: 10),
@@ -266,7 +266,7 @@ class _BudgetCard extends StatelessWidget {
               ),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                decoration: BoxDecoration(color: AppColors.accent.withOpacity(0.16), borderRadius: BorderRadius.circular(20)),
+                decoration: BoxDecoration(color: AppColors.accent.withValues(alpha: 0.16), borderRadius: BorderRadius.circular(20)),
                 child: Text('$pct% used', style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: AppColors.accent)),
               ),
             ],
