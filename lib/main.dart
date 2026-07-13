@@ -9,11 +9,15 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   try {
     await initHive();
-    await LocalNotificationsReminderService(FlutterLocalNotificationsPlugin()).init();
   } catch (e) {
     runApp(_StartupErrorApp(error: e.toString()));
     return;
   }
+  // Best-effort: reminders are an optional subsystem, and the plugin has no
+  // implementation on some platforms (e.g. web) — never block app start.
+  try {
+    await LocalNotificationsReminderService(FlutterLocalNotificationsPlugin()).init();
+  } catch (_) {}
   runApp(const ProviderScope(child: FinanceTrackerApp()));
 }
 
